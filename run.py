@@ -59,9 +59,7 @@ while True:
         image_name = att_dir + 'att' + str(i) + '.png'
         cv2.imwrite(image_name, image)
         print("Captured as: " + bcolors.OKBLUE + image_name + bcolors.ENDC)
-        # Crop image
-        
-        # Process image
+        # Crop & Process image
         target = face_recognition.load_image_file(image_name)
         faces = face_recognition.face_encodings(target)
         att_list = []
